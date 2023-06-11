@@ -1,0 +1,3 @@
+git add . = ao dar enter adiciona todos os arquivos da pasta no registro de versoes
+git commit -m "mensagem" = faz a marca da versao temporal com as modificações feitas
+git push = sobe as mudanças feitas que estão commitadas
