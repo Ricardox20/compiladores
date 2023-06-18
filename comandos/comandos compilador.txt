@@ -1,3 +1,10 @@
+cd .\Desktop\facul\2022.2\compila\ = comando para ir para a pasta onde estao os codigos
+
 gcc "nome do arquivo(main).c" = compila o codigo e gera um executável
 gcc "nome do arquivo(main).c" -o "nome do arquivo(main).exe" = mesmo comando acima porém nomeando o executavel
-.\nome do arquivo gerado(a.exe) = roda o executavel
+.\nome do arquivo gerado(main).exe = roda o executavel
+.\"nome do arquivo gerado(main)".exe > saida.txt = roda o executavel e poe os prints dele numa arquivo de texto
+
+passos para o 1 exercício de compiladores
+gcc "nome do arquivo(main).c" -o "nome do arquivo(main).exe" = mesmo comando acima porém nomeando o executavel
+.\"nome do arquivo gerado(main)".exe > saida.txt = roda o executavel e poe os prints dele numa arquivo de texto

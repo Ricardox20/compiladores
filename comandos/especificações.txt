@@ -1,5 +1,5 @@
 clica com o direito do mouse no iniciar e escolhe a quarta opção de cima pra baixo "sistema"
 
-CPU	Intel(R) Core(TM) i5-9400F CPU @ 2.90GHz   2.90 GHz RAM instalada	16,0 GB
+CPU	Intel Core i5-9400F 2.90 GHz RAM 16,0 GB
 GCC	MinGW.org GCC-6.3.0-1
 S.O.	Windows 10 Pro Versão	22H2

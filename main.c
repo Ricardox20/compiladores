@@ -2,14 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 #define N 100000000
-//#include "String_Entrada_SK.h"
 
 /*
 *   Maquina KS
 */
 
 //String de teste:
-static char entrada[N] = "S(K(K))(KS)(SK)KK(SK)K\0";
+static char entrada[N] = "K(K(K(KISS)))SSS\0";
 static char saida[N];
 
 //Procedimento que recebe duas vari�veis, uma que aponta para
@@ -135,6 +134,34 @@ void reduzS(char* array1, char* array2) {
     array2[k] = '\0';
 }
 
+//Procedimento que recebe duas variáveis que apontam para
+//dois arrays e executa a regra do combinador I: I a => a,
+//copiando os argumentos do array1 para o array2.
+void reduzI(char* array1, char* array2) {
+    int A, nA;
+    int n = 1;
+
+    A = n;
+    acha_argumento(array1,&n);
+    nA = n-1;
+
+    //I a => a
+    int k = 0;
+    int i;
+
+    for (i = A; i <= nA; i++) {
+        array2[k] = array1[i];
+        k++;
+    }
+
+    for (n = n; array1[n] != '\0'; n++) {
+        array2[k] = array1[n];
+        k++;
+    }
+
+    array2[k] = '\0';
+}
+
 //Procedimento que recebe uma vari�vel que aponta para
 //um array e remove os par�nteses da primeira posi��o
 //do array.
@@ -168,6 +195,9 @@ int main() {
                 break;
             case 'S':
                 reduzS(array1,array2);
+                break;
+            case 'I':
+                reduzI(array1,array2);
                 break;
             case '(':
                 recebeParenteses(array1);
