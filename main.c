@@ -2,13 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 #define N 100000000
+#include "String_SKI_entrada.h"
 
 /*
 *   Maquina KS
 */
 
 //String de teste:
-static char entrada[N] = "K(K(K(KISS)))SSS\0";
+//static char entrada[N] = "K(K(K(KISS)))SSS\0";
 static char saida[N];
 
 //Procedimento que recebe duas vari�veis, uma que aponta para
