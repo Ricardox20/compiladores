@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #define N 100000000
-#include "String_KSIBC.h"
+#include "String_SKI_entrada.h"
 
 /*
 *   Maquina KS
@@ -163,102 +163,6 @@ void reduzI(char* array1, char* array2) {
     array2[k] = '\0';
 }
 
-//Procedimento que recebe duas vari�veis que apontam para
-//dois arrays e executa a regra do combinador B: B a b c => a ( b c ),
-//copiando os argumentos do array1 para o array2.
-void reduzB(char* array1, char* array2) {
-    int A, nA;
-    int B, nB;
-    int C, nC;
-    int n = 1;
-
-    A = n;
-    acha_argumento(array1,&n);
-    nA = n-1;
-    B = n;
-    acha_argumento(array1,&n);
-    nB = n-1;
-    C = n;
-    acha_argumento(array1,&n);
-    nC = n-1;
-
-    //B a b c => a ( b c )
-    int k = 0;
-    int i;
-
-    for (i = A; i <= nA; i++) {
-        array2[k] = array1[i];
-        k++;
-    }
-
-    array2[k] = '(';
-    k++;
-
-    for (i = B; i <= nB; i++) {
-        array2[k] = array1[i];
-        k++;
-    }
-    for (i = C; i <= nC; i++) {
-        array2[k] = array1[i];
-        k++;
-    }
-
-    array2[k] = ')';
-    k++;
-
-    for (n = n; array1[n] != '\0'; n++) {
-        array2[k] = array1[n];
-        k++;
-    }
-
-    array2[k] = '\0';
-}
-
-//Procedimento que recebe duas vari�veis que apontam para
-//dois arrays e executa a regra do combinador C: C a b c => a c b,
-//copiando os argumentos do array1 para o array2.
-void reduzC(char* array1, char* array2) {
-    int A, nA;
-    int B, nB;
-    int C, nC;
-    int n = 1;
-
-    A = n;
-    acha_argumento(array1,&n);
-    nA = n-1;
-    B = n;
-    acha_argumento(array1,&n);
-    nB = n-1;
-    C = n;
-    acha_argumento(array1,&n);
-    nC = n-1;
-
-    //C a b c => a c b
-    int k = 0;
-    int i;
-
-    for (i = A; i <= nA; i++) {
-        array2[k] = array1[i];
-        k++;
-    }
-    for (i = C; i <= nC; i++) {
-        array2[k] = array1[i];
-        k++;
-    }
-
-    for (i = B; i <= nB; i++) {
-        array2[k] = array1[i];
-        k++;
-    }
-
-    for (n = n; array1[n] != '\0'; n++) {
-        array2[k] = array1[n];
-        k++;
-    }
-
-    array2[k] = '\0';
-}
-
 //Procedimento que recebe uma vari�vel que aponta para
 //um array e remove os par�nteses da primeira posi��o
 //do array.
@@ -295,12 +199,6 @@ int main() {
                 break;
             case 'I':
                 reduzI(array1,array2);
-                break;
-            case 'B':
-                reduzB(array1,array2);
-                break;
-            case 'C':
-                reduzC(array1,array2);
                 break;
             case '(':
                 recebeParenteses(array1);
