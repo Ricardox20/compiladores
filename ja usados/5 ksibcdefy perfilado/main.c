@@ -9,7 +9,7 @@
 */
 
 //String de teste:
-//static char entrada[N] = "K(K(K(K(K(K(K(K(K(K(K(K(K(K(K(KISS)))))))))))))))SSSSSSSSSSSSSSS\0";
+//static char entrada[N] = "K(K(K(KISS)))SSS\0";
 static char saida[N];
 
 //Procedimento que recebe duas vari�veis, uma que aponta para
@@ -523,9 +523,11 @@ int main() {
     char* array3;
     while (array1[1] != '\0') {
         switch (array1[0]) {
-            case '(':
-                recebeParenteses(array1);
-                array2[0] = 'X';
+            case 'K':
+                reduzK(array1,array2);
+                break;
+            case 'S':
+                reduzS(array1,array2);
                 break;
             case 'I':
                 reduzI(array1,array2);
@@ -533,26 +535,24 @@ int main() {
             case 'B':
                 reduzB(array1,array2);
                 break;
-            case 'K':
-                reduzK(array1,array2);
-                break;
-            case 'F':
-                reduzF(array1,array2);
+            case 'C':
+                reduzC(array1,array2);
                 break;
             case 'D':
                 reduzD(array1,array2);
                 break;
-            case 'S':
-                reduzS(array1,array2);
-                break;
-            case 'C':
-                reduzC(array1,array2);
-                break;
             case 'E':
                 reduzE(array1,array2);
                 break;
+            case 'F':
+                reduzF(array1,array2);
+                break;
             case 'Y':
                 reduzY(array1,array2);
+                break;
+            case '(':
+                recebeParenteses(array1);
+                array2[0] = 'X';
                 break;
             default:
                 break;

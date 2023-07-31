@@ -8,3 +8,6 @@ gcc "nome do arquivo(main).c" -o "nome do arquivo(main).exe" = mesmo comando aci
 passos para o 1 exercício de compiladores
 gcc "nome do arquivo(main).c" -o "nome do arquivo(main).exe" = mesmo comando acima porém nomeando o executavel
 .\"nome do arquivo gerado(main)".exe > saida.txt = roda o executavel e poe os prints dele numa arquivo de texto
+
+FLAGS
+dar o comando ".\automation.ps1" no terminal que o mesmo ja roda a automação com todos os otimizadores
