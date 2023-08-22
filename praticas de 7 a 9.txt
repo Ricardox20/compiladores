@@ -1,0 +1,3 @@
+7	=	rodar o ksi e depois o ksibc
+8	=	rodar ksibcdef, e depois com as 4 flags
+9	=	rodar ksibcdef, com fat de 20 e fib de 20 e com as 4 flags
