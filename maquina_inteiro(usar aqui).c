@@ -38,9 +38,9 @@
 //*/
 
 //#include "inteiro ksi.h"
-//#include "inteiro ksibc.h"
+#include "inteiro ksibc.h"
 //#include "inteiro ksibcdef.h"
-#include "fat.h"
+//#include "fat.h"
 //#include "fib.h"
 static int saida[N];
 
